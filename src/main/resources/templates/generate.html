@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered table-hover table-custom">
+                <tr class="success">
+                    <th>Pierwsza osoba</th>
+                    <th>Druga osoba</th>
+                </tr>
+                <tr th:each="user : ${pairs}">
+                    <td th:text="${user.getFirstPerson()}"></td>
+                    <td th:text="${user.getSecondPerson()}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
